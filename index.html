@@ -168,7 +168,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>找出数组中重复的数字。</p>
+<p>在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">示例 1：输入：</span><br><span class="line">[2, 3, 1, 0, 2, 5, 3]</span><br><span class="line">输出：2 或 3 </span><br><span class="line"></span><br><span class="line">限制：2 &lt;= n &lt;= 100000</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="题解方法一"><a href="#题解方法一" class="headerlink" title="题解方法一"></a>题解方法一</h2><p>使用暴力破解法，直接使用两个循环，查找相同的数字，找到后赋值并返回。</p>
+<p>这种方法时间复杂度高为O（N²），不能达到要求。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findRepeatNumber(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        int num;</span><br><span class="line">        <span class="keyword">for</span>(int i = 0; i &lt; nums.size(); ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (int j = i+1; j &lt; nums.size(); ++j)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[i] == nums[j])</span><br><span class="line">                &#123;</span><br><span class="line">                    num = nums[i];</span><br><span class="line">                    <span class="built_in">return</span> num;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="题解方法二"><a href="#题解方法二" class="headerlink" title="题解方法二"></a>题解方法二</h2><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/solution/mian-shi-ti-03-shu-zu-zhong-zhong-fu-de-shu-zi-b-4/">力扣的解题法</a></p>
+<hr>
+
       
 
       
